@@ -1,0 +1,2 @@
+from playsound import playsound
+playsound("D:\\Users\\Ryzan 3 (226497)\\Music\\[DEMO with Watermark] Ganesh Aarti, JAI GANESH DEVA by Anuradha Paudwal with Hindi, English LyricsI I Full Video Song.mp4")
