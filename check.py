@@ -9,7 +9,7 @@ database = dict(zip(number, square))
 counter=0
 mySet = set()
 
-while  counter<4:
+while  counter<3:
     find = int(input("Your database is ready, Enter the number you want to search "))
     if find in database and find not in mySet:
         print(database[find])
