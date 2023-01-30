@@ -14,10 +14,10 @@ def checkOrder(input, pattern):
     
     return 'false'
 
-
+inp = input("Enter the input ")
 pattern = input("Enter the pattern ")
-input = input("Enter the input ")
-ans = checkOrder(input, pattern)
+
+ans = checkOrder(inp, pattern)
 print(ans)
 
 
