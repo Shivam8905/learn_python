@@ -47,7 +47,7 @@ class singlyLinkedList:
 # Adding Node at the particular index
     def AddAtPosition(self, idx, newdata):
         NewNode = Node(newdata)
-        if idx<0 or idx>list1.size():
+        if idx<0 or idx>self.size():
             print("Wrong idx")
             return
 
@@ -58,6 +58,30 @@ class singlyLinkedList:
         temp1 = temp.nextval
         temp.nextval = NewNode
         NewNode.nextval = temp1
+
+# Removing fron linkedlist
+    def remove(self, data):
+        temp = self.headval
+
+        if temp is not None:
+            if temp.dataval==data:
+                self.headval = temp.next
+                temp=None
+                return
+        while temp is not None:
+            if temp.dataval==data:
+                break
+            pre = temp
+            temp = temp.nextval
+        
+        if temp==None:
+            print("Didnot find the node which you want to remove")
+            return
+
+        pre.nextval = temp.nextval
+        temp=None
+
+
 
 list1 = singlyLinkedList()
 list1.headval = Node(10)
@@ -76,6 +100,13 @@ list1.AtEnd(50)
 # add at particular index
 list1.AddAtPosition(2, 80)
 
+print("Before removing")
+list1.printList()
+
+# Remove
+list1.remove(30)
+
+print("After removing")
 list1.printList()
 # len = list1.size()
 # print(len)
